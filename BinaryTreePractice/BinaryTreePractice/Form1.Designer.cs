@@ -1,6 +1,6 @@
-﻿namespace Server
+﻿namespace BinaryTreePractice
 {
-    partial class Main
+    partial class Form1
     {
         /// <summary>
         /// Required designer variable.

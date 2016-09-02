@@ -37,17 +37,18 @@
             // txtGroupRecieved
             // 
             this.txtGroupRecieved.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.txtGroupRecieved.BackColor = System.Drawing.Color.White;
             this.txtGroupRecieved.Location = new System.Drawing.Point(13, 12);
             this.txtGroupRecieved.Name = "txtGroupRecieved";
             this.txtGroupRecieved.ReadOnly = true;
-            this.txtGroupRecieved.Size = new System.Drawing.Size(595, 410);
+            this.txtGroupRecieved.Size = new System.Drawing.Size(583, 332);
             this.txtGroupRecieved.TabIndex = 1;
             this.txtGroupRecieved.Text = "";
             // 
             // textUserMessageInput
             // 
             this.textUserMessageInput.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.textUserMessageInput.Location = new System.Drawing.Point(13, 443);
+            this.textUserMessageInput.Location = new System.Drawing.Point(13, 350);
             this.textUserMessageInput.Multiline = true;
             this.textUserMessageInput.Name = "textUserMessageInput";
             this.textUserMessageInput.Size = new System.Drawing.Size(485, 41);
@@ -56,8 +57,9 @@
             // btnSendMessages
             // 
             this.btnSendMessages.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.btnSendMessages.Enabled = false;
             this.btnSendMessages.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnSendMessages.Location = new System.Drawing.Point(518, 443);
+            this.btnSendMessages.Location = new System.Drawing.Point(506, 350);
             this.btnSendMessages.Name = "btnSendMessages";
             this.btnSendMessages.Size = new System.Drawing.Size(90, 41);
             this.btnSendMessages.TabIndex = 3;
@@ -68,7 +70,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(620, 509);
+            this.ClientSize = new System.Drawing.Size(608, 407);
             this.Controls.Add(this.btnSendMessages);
             this.Controls.Add(this.textUserMessageInput);
             this.Controls.Add(this.txtGroupRecieved);

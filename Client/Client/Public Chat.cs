@@ -12,9 +12,18 @@ namespace Client
 {
     public partial class Public_Chat : Form
     {
+        Private_Chat privateChatWindow;
+
         public Public_Chat()
         {
             InitializeComponent();
         }
+
+        private void privateChatToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            privateChatWindow = new Private_Chat();
+        }
+
+
     }
 }
