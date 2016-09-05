@@ -25,7 +25,6 @@ namespace Client
             this.hostName = HostName;
         }
 
-
         public TcpClientChat()
         {
             InitializeComponent();
@@ -33,7 +32,7 @@ namespace Client
 
         private void button1_Click(object sender, EventArgs e)
         {
-            ConnectToServer("10.0.20.27", "connected");
+            ConnectToServer("192.168.1.100", "connected");
         }
 
         private void ConnectToServer(string serverIP, string message)
@@ -85,7 +84,7 @@ namespace Client
             stream = client.GetStream();
             stream.Write(sendingMessage, 0, sendingMessage.Length);
 
-            MessageBox.Items.Add("Me : " + txtTypeMessageHere.Text);
+            PrintMessageBox.Items.Add("Me : " + txtTypeMessageHere.Text);
             txtTypeMessageHere.Text = "";
         }
     }

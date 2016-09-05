@@ -13,7 +13,7 @@ namespace Client
 
         static void Main(string[] args)
         {
-            TcpTimeClient client = new TcpTimeClient("10.2.20.27", 7771);
+            TcpTimeClient client = new TcpTimeClient("192.168.1.100", 7771);
             client.ConnectToServer();
         }
     }

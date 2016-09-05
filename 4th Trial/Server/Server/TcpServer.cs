@@ -1,33 +1,26 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.ComponentModel;
-using System.Data;
-using System.Drawing;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
-using System.Windows.Forms;
 using System.Net.Sockets;
 
 namespace Server
 {
-    public partial class TcpChatServer : Form
+    class TcpServer
     {
         private int portNum;
+        private string hostName;
         TcpListener listener;
 
-        bool done = false;
-
-        public TcpChatServer(int PortNum)
+        public TcpServer(string HostName, int PortNum)
         {
+            this.hostName = HostName;
             this.portNum = PortNum;
             listener = null;
         }
 
-        public TcpChatServer()
-        {
-            InitializeComponent();
-        }
+        bool done = false;
 
         public void StartServer()
         {
@@ -36,12 +29,10 @@ namespace Server
 
             while (!done)
             {
-                ReviewMessageBox.Items.Add("Waiting for Connection");
-                //Console.Write("Waiting for connection...");
+                Console.Write("Waiting for connection...");
                 TcpClient client = listener.AcceptTcpClient();
 
-                ReviewMessageBox.Items.Add("Connection accepted.");
-                //Console.WriteLine("Connection accepted.");
+                Console.WriteLine("Connection accepted.");
                 NetworkStream ns = client.GetStream();
 
 
@@ -61,12 +52,6 @@ namespace Server
 
             listener.Stop();
 
-        }
-
-
-        private void TurnOnServer_Click(object sender, EventArgs e)
-        {
-            StartServer();
         }
     }
 }

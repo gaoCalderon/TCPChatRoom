@@ -44,8 +44,8 @@ namespace Server
                 try
                 {
                     ns.Write(byteTime, 0, byteTime.Length);
-                    ns.Close();
-                    client.Close();
+                    //ns.Close();
+                    //client.Close();
                 }
                 catch (Exception e)
                 {

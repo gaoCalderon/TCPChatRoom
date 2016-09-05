@@ -30,7 +30,7 @@
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(TcpClientChat));
             this.button1 = new System.Windows.Forms.Button();
-            this.MessageBox = new System.Windows.Forms.ListBox();
+            this.PrintMessageBox = new System.Windows.Forms.ListBox();
             this.txtTypeMessageHere = new System.Windows.Forms.TextBox();
             this.btnSend = new System.Windows.Forms.Button();
             this.SuspendLayout();
@@ -48,14 +48,14 @@
             this.button1.UseVisualStyleBackColor = false;
             this.button1.Click += new System.EventHandler(this.button1_Click);
             // 
-            // MessageBox
+            // PrintMessageBox
             // 
-            this.MessageBox.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.MessageBox.FormattingEnabled = true;
-            this.MessageBox.Location = new System.Drawing.Point(25, 22);
-            this.MessageBox.Name = "MessageBox";
-            this.MessageBox.Size = new System.Drawing.Size(505, 251);
-            this.MessageBox.TabIndex = 1;
+            this.PrintMessageBox.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.PrintMessageBox.FormattingEnabled = true;
+            this.PrintMessageBox.Location = new System.Drawing.Point(25, 22);
+            this.PrintMessageBox.Name = "PrintMessageBox";
+            this.PrintMessageBox.Size = new System.Drawing.Size(505, 251);
+            this.PrintMessageBox.TabIndex = 1;
             // 
             // txtTypeMessageHere
             // 
@@ -86,7 +86,7 @@
             this.ClientSize = new System.Drawing.Size(668, 337);
             this.Controls.Add(this.btnSend);
             this.Controls.Add(this.txtTypeMessageHere);
-            this.Controls.Add(this.MessageBox);
+            this.Controls.Add(this.PrintMessageBox);
             this.Controls.Add(this.button1);
             this.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(192)))), ((int)(((byte)(128)))));
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
@@ -100,7 +100,7 @@
         #endregion
 
         private System.Windows.Forms.Button button1;
-        private System.Windows.Forms.ListBox MessageBox;
+        private System.Windows.Forms.ListBox PrintMessageBox;
         private System.Windows.Forms.TextBox txtTypeMessageHere;
         private System.Windows.Forms.Button btnSend;
     }

@@ -22,7 +22,7 @@ namespace Client
         {
             try
             {
-                TcpClient client = new TcpClient("10.2.20.27", portNum);
+                TcpClient client = new TcpClient("192.168.1.100", portNum);
                 //TcpClient client = new TcpClient("10.2.20.27", portNum);
 
                 NetworkStream ns = client.GetStream();
