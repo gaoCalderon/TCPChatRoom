@@ -12,7 +12,7 @@ namespace Server
 
         static void Main(string[] args)
         {
-            Server server = new Server(7771);
+            Server server = new Server("10.2.20.27", 7771);
             server.StartServer();
 
             

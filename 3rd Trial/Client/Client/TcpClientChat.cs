@@ -14,8 +14,6 @@ namespace Client
 {
     public partial class TcpClientChat : Form
     {
-        //Socket socket;
-        //EndPoint endPointLocal;
         private string hostName;
         TcpClient client;
         NetworkStream stream;
@@ -36,10 +34,6 @@ namespace Client
         private void button1_Click(object sender, EventArgs e)
         {
             ConnectToServer("10.0.20.27", "connected");
-
-            //bind socket
-            //endPointLocal = new IPEndPoint(IPAddress.Parse("10.2.20.27"), Convert.ToInt32(Port));
-            //socket.Bind(endPointLocal);
         }
 
         private void ConnectToServer(string serverIP, string message)
@@ -68,9 +62,6 @@ namespace Client
                 responseData = System.Text.Encoding.ASCII.GetString(data, 0, bytes);
                 output = "Received: " + responseData;
                 System.Windows.Forms.MessageBox.Show(output);
-
-                //stream.Close();
-                //client.Close();
             }
             catch (ArgumentNullException e)
             {
@@ -90,15 +81,12 @@ namespace Client
             byte[] sendingMessage = new byte[1500];
             sendingMessage = aEncoding.GetBytes(txtTypeMessageHere.Text);
 
-            //socket.Send(sendingMessage);
             sendingMessage = System.Text.Encoding.ASCII.GetBytes(txtTypeMessageHere.Text);
             stream = client.GetStream();
             stream.Write(sendingMessage, 0, sendingMessage.Length);
 
-
             MessageBox.Items.Add("Me : " + txtTypeMessageHere.Text);
             txtTypeMessageHere.Text = "";
-
         }
     }
 }

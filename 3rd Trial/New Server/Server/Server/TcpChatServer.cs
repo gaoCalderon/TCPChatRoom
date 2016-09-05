@@ -1,29 +1,33 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.ComponentModel;
+using System.Data;
+using System.Drawing;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
-using System.Net;
+using System.Windows.Forms;
 using System.Net.Sockets;
-using System.Threading;
 
 namespace Server
 {
-    class Server
+    public partial class TcpChatServer : Form
     {
-
         private int portNum;
-        private string hostName;
         TcpListener listener;
 
-        public Server(string HostName, int PortNum)
+        bool done = false;
+
+        public TcpChatServer(int PortNum)
         {
-            this.hostName = HostName;
             this.portNum = PortNum;
             listener = null;
         }
 
-        bool done = false;
+        public TcpChatServer()
+        {
+            InitializeComponent();
+        }
 
         public void StartServer()
         {
@@ -32,10 +36,12 @@ namespace Server
 
             while (!done)
             {
-                Console.Write("Waiting for connection...");
+                //ReviewMessageBox.Items.Add("Waiting for Connection");
+                //Console.Write("Waiting for connection...");
                 TcpClient client = listener.AcceptTcpClient();
 
-                Console.WriteLine("Connection accepted.");
+                //ReviewMessageBox.Items.Add("Connection accepted.");
+                //Console.WriteLine("Connection accepted.");
                 NetworkStream ns = client.GetStream();
 
 
@@ -44,8 +50,8 @@ namespace Server
                 try
                 {
                     ns.Write(byteTime, 0, byteTime.Length);
-                    ns.Close();
-                    client.Close();
+                    //ns.Close();
+                    //client.Close();
                 }
                 catch (Exception e)
                 {
@@ -57,6 +63,10 @@ namespace Server
 
         }
 
-        
+
+        private void TurnOnServer_Click(object sender, EventArgs e)
+        {
+            StartServer();
+        }
     }
 }

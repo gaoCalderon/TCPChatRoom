@@ -12,7 +12,7 @@ namespace Client
         private int portNum;
         private string hostName;
 
-        public TcpTimeClient(int PortNum, string HostName)
+        public TcpTimeClient(string HostName, int PortNum)
         {
             this.portNum = PortNum;
             this.hostName = HostName;
@@ -31,7 +31,6 @@ namespace Client
                 int bytesRead = ns.Read(bytes, 0, bytes.Length);
 
                 Console.WriteLine(Encoding.ASCII.GetString(bytes, 0, bytesRead));
-
 
 
                 //client.Close();
