@@ -11,7 +11,7 @@ namespace Server
         static void Main(string[] args)
         {
 
-            TcpServer server = new TcpServer("192.168.1.100", 7771);
+            TcpServerClass server = new TcpServerClass("192.168.1.100", 7771);
             server.StartServer();
 
         }

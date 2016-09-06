@@ -47,7 +47,6 @@ namespace Client
                 data = System.Text.Encoding.ASCII.GetBytes(message);
 
                 stream = client.GetStream();
-
                 stream.Write(data, 0, data.Length);
 
                 output = "Sent: " + message;
